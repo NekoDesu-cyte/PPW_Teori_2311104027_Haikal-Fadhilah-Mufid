@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BikeSHop</title>
+    <style>
+        #header {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding-left: 25px;
+            background-color: rgb(245, 48, 48);
+            height: 50px;
+            font-size: 40px;
+            color: white;
+            text-align: left;
+        }
+
+        #menu {
+            float: left;
+            width: 100%;
+            height: auto;
+            text-align: right;;
+            margin-bottom: 20px;
+        }
+
+        #menu a {
+            text-decoration: none;
+            color: red;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0 5px;
+        }
+
+        #banner{
+            float: left;
+            width: 100%;
+            /* background-color: rgb(46, 24, 24); */
+            min-height: 300px;
+            text-align: center;
+        }
+
+        #content {
+            display: flex;                 
+            justify-content: center;       
+            flex-wrap: wrap;               
+            gap: 20px;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        #content .item {
+            background-color: white;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            width: 200px;                  /* sama besar seperti yang di kanan */
+            text-align: left;
+            padding: 15px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+}
+
+        #popular {
+            float: right;
+            /* background-color: #fb301d; */
+            width: 400px;
+            padding: 20px;
+            border-radius: 10px;    /* Lengkung sudut */
+            box-sizing: border-box;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        #popular .item {
+            background-color: white;
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        #content .item:hover {
+            transform: scale(1.05);
+        }
+
+        #content .item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: filter 0.3s ease, opacity 0.3s ease;
+        }
+
+/* efek hover gambar */
+        #content .item:hover img {
+            opacity: 0.6;
+              filter: blur(2px);
+        }
+
+        #popular .item :hover {             /* efek kursor biar keren cuy */
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+
+        #popular .item img {
+            width: 350px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        #popular .item img:hover {
+            filter: blur(1px);
+            opacity: 0.5;
+        }
+
+
+        #popular .item p {
+            text-align: left;
+            margin: 4px 0;
+        }
+
+        #footer {
+            float: left;
+            width: 100%;
+            /* background-color: rgb(184, 255, 235); */
+            min-height: 80px;
+            text-align: center;
+        }
+    </style>
+</head>
+    <h1 id="header">BikeShop</h1>
+<body>
+    <div id="menu">
+        <a href="Login.html">Login</a>
+        <a href="Member.">Member</a>
+        <a href="Beranda">Beranda</a>
+        <a href="Produk">Produk</a>
+    </div>
+    
+    <div id="banner">
+        <img src="./Assets/bikeShop.jpg" alt="" style="height: 350px; width: 1000px;">
+    </div>
+
+    <!-- RECOMENDATION -->
+    <div id="popular">
+        <h2>Recomendation</h2>
+
+    <div class="item">
+        <img src="./Assets/mountainbike1.jpg" alt="Bike 1" width="150">
+        <p>Giant Anthem Advanced 29 1</p>
+        <p>IDR 97.500.000</p>
+    </div>
+    
+
+    <div class="item">
+        <img src="./Assets/roadbike1.jpg" alt="Bike 2" width="150">
+        <p>Polygon Helios A9X TCG "Black"</p>
+        <p>IDR 81.000.000</p>
+    </div>
+    </div>
+
+    <!-- NORMAL -->
+
+    <div id="content">
+        <div class="item">
+            <img src="./Assets/mountainbike2.jpg" alt="Bike 2">
+            <h3>Specialized Stumpjumper Comp Carbon 29</h3>
+            <p>IDR 85.000.000</p>
+        </div>
+
+        <div class="item">
+            <img src="./Assets/mountainbike3.jpg" alt="Bike 3">
+            <h3>Trek Fuel EX 9.8 GX</h3>
+            <p>IDR 78.500.000</p>
+        </div>
+        
+        <div class="item">
+            <img src="./Assets/mountainbike4.jpg" alt="Bike 6">
+            <h3>Polygon Collosus 9 </h3>
+            <p>IDR 92.750.000</p>
+        </div>
+
+        <div class="item">
+            <img src="./Assets/roadbike2.jpg" alt="Bike 5">
+            <h3>Cannondale SuperSix EVO Hi-MOD 1 SRAM RED AXS</h3>
+            <p>IDR 70.000.000</p>
+        </div>
+
+        <div class="item">
+            <img src="./Assets/roadbike3.jpg" alt="Bike 6">
+            <h3>Giant TCR Advanced Di2</h3>
+            <p>IDR 57.857.000</p>
+        </div>
+
+        <div class="item">
+            <img src="./Assets/roadbike4.jpg" alt="Bike 6">
+            <h3>Polygon Helios A7D 105-Di2</h3>
+            <p>IDR 49.000.000</p>
+        </div>
+
+        <div id="footer">
+            <p>&copy; 2025 BikeShop. All rights reserved.</p>
+    </div> 
+</body>
+</html>
